@@ -79,7 +79,7 @@ var ZappGenerator = yeoman.generators.Base.extend({
     this.write('app/scripts/main.js', 'console.log(\'\\\'Allo \\\'Allo!\');');
   },
   message: function () {
-    console.log('\nAfter running `npm install & bower install`, inject your front end dependencies into your HTML by running:' + chalk.yellow.bold('\n  gulp wiredep'));
+    console.log('\nAfter running `npm install & bower install`, inject your front end dependencies into your HTML by running:' + chalk.magenta.bold(' gulp wiredep'));
   }
 });
 
