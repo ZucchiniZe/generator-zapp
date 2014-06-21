@@ -1,7 +1,5 @@
 'use strict';
 var fs = require('fs');
-var util = require('util');
-var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
@@ -81,10 +79,7 @@ var ZappGenerator = yeoman.generators.Base.extend({
     this.write('app/scripts/main.js', 'console.log(\'\\\'Allo \\\'Allo!\');');
   },
   message: function () {
-    console.log('\nAfter running `npm install & bower install`, inject your front end dependencies into' +
-               '\nyour HTML by running:' +
-               '\n' +
-               chalk.yellow.bold('\n  gulp wiredep'));
+    console.log('\nAfter running `npm install & bower install`, inject your front end dependencies into your HTML by running:' + chalk.yellow.bold('\n  gulp wiredep'));
   }
 });
 
