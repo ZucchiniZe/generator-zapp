@@ -51,21 +51,21 @@ var ZappGenerator = yeoman.generators.Base.extend({
     this.mkdir('app/styles');
     this.mkdir('app/images');
   },
-  configs: function () {
-    this.template('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
-    this.copy('bowerrc', '.bowerrc');
-  },
   projectfiles: function () {
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
-  },
-  gulpfile: function () {
-    this.copy('gulpfile.js', 'gulpfile.js');
+    this.copy('bowerrc', '.bowerrc');
   },
   git: function () {
     this.copy('gitignore', '.gitignore');
     this.copy('gitattributes', '.gitattributes');
+  },
+  configs: function () {
+    this.template('_package.json', 'package.json');
+    this.copy('_bower.json', 'bower.json');
+  },
+  gulpfile: function () {
+    this.copy('gulpfile.js', 'gulpfile.js');
   },
   h5bp: function () {
     this.copy('404.html', 'app/404.html');
@@ -79,6 +79,12 @@ var ZappGenerator = yeoman.generators.Base.extend({
   },
   js: function () {
     this.write('app/scripts/main.js', 'console.log(\'\\\'Allo \\\'Allo!\');');
+  },
+  message: function () {
+    console.log('\nAfter running `npm install & bower install`, inject your front end dependencies into' +
+               '\nyour HTML by running:' +
+               '\n' +
+               chalk.yellow.bold('\n  gulp wiredep'));
   }
 });
 
