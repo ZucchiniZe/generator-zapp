@@ -32,7 +32,7 @@ Please see our [gulpfile.js](app/templates/gulpfile.js) for up to date informati
 
 *(HTML/CSS/JS/Images/etc)*
 
-To install dependencies, run `bower install --save package-name` to get the files, then add a `script` or `style` tag to your `index.html` or another appropriate place.
+To install dependencies, run `bower install --save package-name` to get the files, then run `gulp wiredep` to automagically add `script` or `style` tags to your `index.html`.
 
 ## Options
 
