@@ -121,7 +121,7 @@ gulp.task('wiredep', function () {
 });
 
 gulp.task('watch', ['connect', 'styles', 'browser-sync'], function () {
-    var server = $.livereload();
+    $.livereload.listen();
 
     // watch for changes
 
@@ -130,9 +130,7 @@ gulp.task('watch', ['connect', 'styles', 'browser-sync'], function () {
         '.tmp/styles/**/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
-    ]).on('change', function (file) {
-        server.changed(file.path);
-    });
+    ]).on('change', $.livereload.changed);
 
     gulp.watch('app/styles/**/*.less', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
