@@ -1,4 +1,4 @@
-# Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-gulp-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-gulp-webapp)
+# Web app generator [![Build Status](http://img.shields.io/travis/ZucchiniZe/generator-zapp.svg?style=flat)](https://travis-ci.org/ZucchiniZe/generator-zapp)
 
 > [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app using [gulp](http://gulpjs.com/) for the build process
 
